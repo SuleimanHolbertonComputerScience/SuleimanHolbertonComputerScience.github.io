@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuleimanHolbertonComputerScience | CS Foundations Portfolio</title>
+  <meta name="description" content="Archival portfolio of Holberton School Computer Science coursework by Suleiman Hajizadeh — Bioinformatician & Computational Biologist." />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --cyan: #00d4ff;
+      --purple: #7c3aed;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --green: #3fb950;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 1.1rem; font-weight: 700;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-brand img {
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 1.5px solid var(--cyan);
+    }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,255,0.08) 0%, transparent 70%),
+                  radial-gradient(ellipse 60% 40% at 80% 80%, rgba(124,58,237,0.08) 0%, transparent 60%);
+    }
+    .hero-logo {
+      width: 140px; height: 140px; border-radius: 28px;
+      border: 2px solid rgba(0,212,255,0.4);
+      box-shadow: 0 0 35px rgba(0,212,255,0.3), 0 0 70px rgba(124,58,237,0.2);
+      margin-bottom: 1.75rem;
+      transition: transform .3s ease;
+    }
+    .hero-logo:hover {
+      transform: scale(1.05);
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.35rem 1.1rem;
+      border: 1px solid var(--cyan);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--cyan);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      background: rgba(0,212,255,0.05);
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem; color: var(--muted);
+      max-width: 640px; margin: 0 auto 2rem;
+    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px; font-size: 0.95rem; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      color: #fff;
+      box-shadow: 0 0 20px rgba(0,212,255,0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-secondary:hover { border-color: var(--cyan); }
+
+    /* STATS */
+    .stats {
+      display: flex; justify-content: center; gap: 3.5rem; flex-wrap: wrap;
+      padding: 2.2rem 2rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: rgba(22,27,34,0.4);
+    }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--cyan); }
+    .stat-label { font-size: 0.85rem; color: var(--muted); }
+
+    /* SECTIONS */
+    section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+    h2 {
+      font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;
+    }
+    .section-sub { color: var(--muted); margin-bottom: 2.5rem; }
+
+    /* MODULE CARDS */
+    .modules-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 700px) { .modules-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .modules-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .card:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px rgba(0,212,255,0.1);
+    }
+    .card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .card p { font-size: 0.87rem; color: var(--muted); line-height: 1.5; }
+    .card-lang {
+      display: inline-block;
+      margin-top: 0.75rem; padding: 0.2rem 0.6rem;
+      border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+      background: rgba(0,212,255,0.1); color: var(--cyan);
+    }
+
+    /* BIO BRIDGE */
+    .bridge-grid { display: grid; gap: 1rem; }
+    @media (min-width: 700px) { .bridge-grid { grid-template-columns: 1fr 1fr; } }
+    .bridge-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.25rem;
+    }
+    .bridge-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .bridge-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .bridge-item p { font-size: 0.83rem; color: var(--muted); }
+
+    /* ABOUT */
+    .about-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 2.5rem;
+      display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;
+    }
+    .about-avatar {
+      width: 90px; height: 90px; border-radius: 50%;
+      border: 2px solid var(--cyan);
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0,212,255,0.3);
+    }
+    .about-text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .about-text .role { color: var(--cyan); font-size: 0.9rem; margin-bottom: 0.8rem; }
+    .about-text p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem; }
+    .about-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .about-links a {
+      padding: 0.45rem 1rem;
+      border: 1px solid var(--border); border-radius: 6px;
+      text-decoration: none; color: var(--text); font-size: 0.85rem;
+      transition: border-color .2s, color .2s;
+    }
+    .about-links a:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem; text-align: center;
+      color: var(--muted); font-size: 0.85rem;
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+
+    /* GLOW DOTS */
+    .dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: var(--green);
+      margin-right: 6px; animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="nav-brand">
+      <img src="logo.jpg" alt="SuleimanHCS Logo" />
+      <span>SuleimanHolbertonComputerScience</span>
+    </a>
+    <div class="nav-links">
+      <a href="#modules">Modules</a>
+      <a href="#bridge">Bioinformatics Bridge</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank">GitHub Org ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="logo.jpg" alt="SuleimanHolbertonComputerScience" class="hero-logo" />
+    <div class="hero-badge"><span class="dot"></span> Holberton School · 9-Month CS Program Archive</div>
+    <h1>CS Foundations for<br><span>Computational Biology</span></h1>
+    <p>A complete archive of low-level systems programming, algorithms, full-stack architectures, and DevOps coursework — providing the engineering backbone for modern bioinformatics.</p>
+    <div class="hero-cta">
+      <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank" class="btn btn-primary">🏛️ View Organization</a>
+      <a href="#modules" class="btn btn-secondary">Explore Modules ↓</a>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="stat-num">9</div><div class="stat-label">Months Intensive Study</div></div>
+    <div class="stat"><div class="stat-num">16+</div><div class="stat-label">Coursework Modules</div></div>
+    <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Core Languages</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Specialization Pillars</div></div>
+  </div>
+
+  <!-- MODULES -->
+  <section id="modules">
+    <h2>🗂️ Curriculum Modules</h2>
+    <p class="section-sub">All coursework modules completed during the intensive program</p>
+
+    <div class="modules-grid">
+
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>Low-Level Programming & C</h3>
+        <p>Memory layout, pointer arithmetic, dynamic allocation, structures, bit manipulation, and system calls.</p>
+        <span class="card-lang">C · Valgrind</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🖨️</div>
+        <h3>Custom printf</h3>
+        <p>From-scratch implementation of the standard C <code>printf</code> with specifiers (%d, %s, %c, %x, %p) and buffer handling.</p>
+        <span class="card-lang">C</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌲</div>
+        <h3>Binary Trees & Sorting</h3>
+        <p>Binary Search Trees, AVL balance rotations, traversals (pre/in/post-order), Quick sort, Merge sort, and Big-O efficiency.</p>
+        <span class="card-lang">C · Algorithms</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💲</div>
+        <h3>UNIX Shell Interpreter</h3>
+        <p>Command line interpreter: process management with <code>fork</code>/<code>execve</code>, signal handling, paths, and builtins.</p>
+        <span class="card-lang">C · POSIX</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🐍</div>
+        <h3>Higher-Level Python</h3>
+        <p>Object-Oriented Programming (OOP), file serialization (JSON), unit testing (unittest), SQL ORM, and REST APIs.</p>
+        <span class="card-lang">Python · SQL</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🏠</div>
+        <h3>AirBnB Clone (hbnb)</h3>
+        <p>Full-stack project: CLI console interpreter, Flask web framework, MySQL database engine, and HTML/CSS presentation.</p>
+        <span class="card-lang">Python · Flask · MySQL</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🐳</div>
+        <h3>DevOps & Docker</h3>
+        <p>Automated deployment, configuration management, Nginx load balancers, SSL certificates, and Docker containerization.</p>
+        <span class="card-lang">Bash · Docker · Nginx</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Network Protocols</h3>
+        <p>OSI 7 layers, TCP/IP, UDP sockets, DNS resolution, HTTP request/response lifecycles, and network security.</p>
+        <span class="card-lang">Networking · Bash</span>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚛️</div>
+        <h3>Web Engineering</h3>
+        <p>Responsive design, modern React hooks, Node.js server runtimes, Express routing, and MongoDB document databases.</p>
+        <span class="card-lang">React · Node.js · MongoDB</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BIOINFORMATICS BRIDGE -->
+  <section id="bridge" style="background: linear-gradient(180deg, transparent, rgba(0,212,255,0.03), transparent); border-radius: 24px;">
+    <h2>🔬 CS Foundations → Bioinformatics Bridge</h2>
+    <p class="section-sub">How each computer science domain directly powers high-throughput bioinformatics & computational biology</p>
+
+    <div class="bridge-grid">
+      <div class="bridge-item">
+        <div class="bridge-icon">🧠</div>
+        <div>
+          <h4>C Memory Management → Sequence Parsers</h4>
+          <p>Direct pointer manipulation and heap optimization are required to build high-performance genomic aligners like BLAST, BWA, and Bowtie.</p>
+        </div>
+      </div>
+      <div class="bridge-item">
+        <div class="bridge-icon">🌳</div>
+        <div>
+          <h4>Trees & Graph Algorithms → Phylogenetics</h4>
+          <p>Tree traversals and shortest-path graph algorithms are the mathematical foundation of phylogenetic trees and de Bruijn genome assembly graphs.</p>
+        </div>
+      </div>
+      <div class="bridge-item">
+        <div class="bridge-icon">🐳</div>
+        <div>
+          <h4>Docker & DevOps → Reproducible Workflows</h4>
+          <p>Containerizing software environments guarantees 100% scientific reproducibility across HPC clusters, Nextflow, and Snakemake pipelines.</p>
+        </div>
+      </div>
+      <div class="bridge-item">
+        <div class="bridge-icon">🐍</div>
+        <div>
+          <h4>Python OOP → Omics Tooling</h4>
+          <p>Object-oriented abstractions allow structured handling of complex biological entities: gene features, FASTA records, and BAM alignments.</p>
+        </div>
+      </div>
+      <div class="bridge-item">
+        <div class="bridge-icon">🔌</div>
+        <div>
+          <h4>REST APIs → Biological Databases</h4>
+          <p>API client design enables programmatic access to NCBI E-utilities, Ensembl REST, UniProt, ClinVar, and AlphaFold databases.</p>
+        </div>
+      </div>
+      <div class="bridge-item">
+        <div class="bridge-icon">🖥️</div>
+        <div>
+          <h4>System Engineering → HPC Clusters</h4>
+          <p>Linux administration, bash scripting, and process control are crucial for managing SLURM job arrays and high-throughput sequencing runs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>👨‍💻 About the Author</h2>
+    <p class="section-sub">Bioinformatics Researcher & Computational Biologist</p>
+
+    <div class="about-card">
+      <img src="logo.jpg" alt="Suleiman Hajizadeh" class="about-avatar" />
+      <div class="about-text">
+        <h3>Suleiman Hajizadeh</h3>
+        <div class="role">Bioinformatician & Computational Biologist</div>
+        <p>
+          Equipped with a solid foundation from the intensive 9-month Holberton School Computer Science program,
+          applying software engineering principles to computational biology, genomics, and multi-omics data analysis.
+        </p>
+        <div class="about-links">
+          <a href="https://github.com/SuleimanHajizadeh" target="_blank">🔗 Personal GitHub Profile</a>
+          <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank">🏛️ Organization</a>
+          <a href="mailto:suleyman.hacizade1@gmail.com">📧 suleyman.hacizade1@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Crafted with 💙 | 
+      <a href="https://github.com/SuleimanHolbertonComputerScience">SuleimanHolbertonComputerScience</a> · 
+      Holberton School Computer Science Archive · 
+      <a href="https://github.com/SuleimanHajizadeh">Suleiman Hajizadeh</a>
+    </p>
+  </footer>
+
+</body>
+</html>
