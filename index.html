@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SuleimanHolbertonComputerScience | CS Foundations Portfolio</title>
-  <meta name="description" content="Archival portfolio of Holberton School Computer Science coursework by Suleiman Hajizadeh — Bioinformatician & Computational Biologist." />
+  <meta name="description" content="Archival portfolio of Holberton School Computer Science coursework by Suleiman Hajizadeh — Bioinformatician & Computational Biologist. Core data is private; request access via email." />
   <link rel="icon" type="image/jpeg" href="logo.jpg" />
   <style>
     :root {
@@ -13,12 +13,14 @@
       --border: #30363d;
       --cyan: #00d4ff;
       --purple: #7c3aed;
+      --amber: #f59e0b;
       --text: #e6edf3;
       --muted: #8b949e;
       --green: #3fb950;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
@@ -49,9 +51,22 @@
       width: 34px; height: 34px; border-radius: 50%;
       border: 1.5px solid var(--cyan);
     }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
     .nav-links a:hover { color: var(--text); }
+    .nav-links a.nav-access {
+      color: var(--amber);
+      border: 1px solid rgba(245,158,11,0.4);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(245,158,11,0.08);
+      font-weight: 600;
+      font-size: 0.82rem;
+    }
+    .nav-links a.nav-access:hover {
+      background: rgba(245,158,11,0.18);
+      border-color: var(--amber);
+    }
 
     /* HERO */
     .hero {
@@ -66,6 +81,7 @@
       position: absolute; inset: 0;
       background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,255,0.08) 0%, transparent 70%),
                   radial-gradient(ellipse 60% 40% at 80% 80%, rgba(124,58,237,0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
     .hero-logo {
       width: 140px; height: 140px; border-radius: 28px;
@@ -73,6 +89,7 @@
       box-shadow: 0 0 35px rgba(0,212,255,0.3), 0 0 70px rgba(124,58,237,0.2);
       margin-bottom: 1.75rem;
       transition: transform .3s ease;
+      position: relative;
     }
     .hero-logo:hover {
       transform: scale(1.05);
@@ -87,12 +104,14 @@
       margin-bottom: 1.5rem;
       letter-spacing: 0.05em;
       background: rgba(0,212,255,0.05);
+      position: relative;
     }
     .hero h1 {
       font-size: clamp(2rem, 6vw, 3.8rem);
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 1rem;
+      position: relative;
     }
     .hero h1 span {
       background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
@@ -102,8 +121,9 @@
     .hero p {
       font-size: 1.15rem; color: var(--muted);
       max-width: 640px; margin: 0 auto 2rem;
+      position: relative;
     }
-    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; position: relative; }
     .btn {
       padding: 0.75rem 1.6rem;
       border-radius: 8px; font-size: 0.95rem; font-weight: 600;
@@ -116,12 +136,36 @@
       color: #fff;
       box-shadow: 0 0 20px rgba(0,212,255,0.3);
     }
+    .btn-access {
+      background: rgba(245,158,11,0.14);
+      border: 1px solid var(--amber);
+      color: #fde68a;
+    }
+    .btn-access:hover {
+      background: rgba(245,158,11,0.25);
+      box-shadow: 0 0 20px rgba(245,158,11,0.25);
+    }
     .btn-secondary {
       background: transparent;
       border: 1px solid var(--border);
       color: var(--text);
     }
     .btn-secondary:hover { border-color: var(--cyan); }
+
+    .hero-private-pill {
+      margin-top: 1.75rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      background: rgba(22,27,34,0.85);
+      border: 1px solid rgba(245,158,11,0.35);
+      font-size: 0.86rem;
+      color: var(--muted);
+      max-width: 680px;
+      position: relative;
+    }
+    .hero-private-pill strong { color: #fde68a; }
+    .hero-private-pill a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+    .hero-private-pill a:hover { text-decoration: underline; }
 
     /* STATS */
     .stats {
@@ -140,6 +184,60 @@
       font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;
     }
     .section-sub { color: var(--muted); margin-bottom: 2.5rem; }
+
+    /* PRIVATE VAULT BANNER SECTION */
+    .vault-banner {
+      background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(124,58,237,0.1) 100%);
+      border: 1px solid rgba(245,158,11,0.4);
+      border-radius: 18px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .vault-header {
+      display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+    }
+    .vault-badge {
+      background: rgba(245,158,11,0.2);
+      border: 1px solid var(--amber);
+      color: #fde68a;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .vault-grid {
+      display: grid; gap: 1.5rem; margin-bottom: 1.75rem;
+    }
+    @media (min-width: 768px) { .vault-grid { grid-template-columns: 1fr 1fr; } }
+    .vault-lang-box {
+      background: rgba(13,17,23,0.75);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.35rem;
+    }
+    .vault-lang-box h3 {
+      font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text);
+    }
+    .vault-lang-box p {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.6;
+    }
+    .vault-actions {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      padding-top: 0.5rem;
+    }
+    .email-chip {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.65rem 1.1rem;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
+      color: var(--cyan);
+    }
 
     /* MODULE CARDS */
     .modules-grid { display: grid; gap: 1.5rem; }
@@ -191,6 +289,7 @@
       object-fit: cover;
       box-shadow: 0 0 20px rgba(0,212,255,0.3);
     }
+    .about-text { flex: 1; min-width: 260px; }
     .about-text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; }
     .about-text .role { color: var(--cyan); font-size: 0.9rem; margin-bottom: 0.8rem; }
     .about-text p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem; }
@@ -233,6 +332,7 @@
     <div class="nav-links">
       <a href="#modules">Modules</a>
       <a href="#bridge">Bioinformatics Bridge</a>
+      <a href="#access" class="nav-access">🔒 Private Data & Access</a>
       <a href="#about">About</a>
       <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank">GitHub Org ↗</a>
     </div>
@@ -246,7 +346,11 @@
     <p>A complete archive of low-level systems programming, algorithms, full-stack architectures, and DevOps coursework — providing the engineering backbone for modern bioinformatics.</p>
     <div class="hero-cta">
       <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank" class="btn btn-primary">🏛️ View Organization</a>
+      <a href="#access" class="btn btn-access">🔒 Request Private Data Access</a>
       <a href="#modules" class="btn btn-secondary">Explore Modules ↓</a>
+    </div>
+    <div class="hero-private-pill">
+      🔒 <strong>Məxfilik Qeydi / Privacy Notice:</strong> Buradakı əsas kod bazası və datalar <strong>Private (Məxfi)</strong> saxlanılır. Giriş (access) əldə etmək üçün e-poçt vasitəsilə müraciət edə bilərsiniz: <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault">suleyman.hacizade1@gmail.com</a>
     </div>
   </div>
 
@@ -254,14 +358,46 @@
   <div class="stats">
     <div class="stat"><div class="stat-num">9</div><div class="stat-label">Months Intensive Study</div></div>
     <div class="stat"><div class="stat-num">16+</div><div class="stat-label">Coursework Modules</div></div>
+    <div class="stat"><div class="stat-num">38+</div><div class="stat-label">LLM Wiki Pages</div></div>
     <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Core Languages</div></div>
-    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Specialization Pillars</div></div>
   </div>
+
+  <!-- PRIVATE DATA & ACCESS REQUEST SECTION -->
+  <section id="access" style="padding-bottom: 1rem;">
+    <div class="vault-banner">
+      <div class="vault-header">
+        <span class="vault-badge">🔒 Private Repository & Data Vault</span>
+        <h2 style="margin: 0; font-size: 1.55rem;">Məxfi Məlumat Bazası və Giriş İcazəsi (Request Access)</h2>
+      </div>
+      <div class="vault-grid">
+        <div class="vault-lang-box">
+          <h3>🇦🇿 Azərbaycan dilində</h3>
+          <p>
+            Bu təşkilatın daxilindəki əsas mənbə kodları, 16 modul üzrə tapşırıq həlləri, daxili datalar və 38+ sənədlik <strong>Obsidian LLM Wiki</strong> bilik şəbəkəsi (<code>SuleimanHolbertonComputerScience</code> repozitoriyası) akademik bütövlük və müəllif hüquqlarının qorunması məqsədilə <strong>Private (Məxfi)</strong> olaraq saxlanılır.<br><br>
+            Əgər işə qəbul (recruitment), akademik qiymətləndirmə, elmi tədqiqat və ya əməkdaşlıq üçün bu məlumatlara <strong>giriş icazəsi (access)</strong> almaq istəyirsinizsə, elektron poçt ünvanıma müraciət edə bilərsiniz.
+          </p>
+        </div>
+        <div class="vault-lang-box">
+          <h3>🇬🇧 In English</h3>
+          <p>
+            All core source code, raw coursework implementations, project datasets, and the internal 38+ page <strong>Obsidian LLM Wiki</strong> knowledge graph (housed in the <code>SuleimanHolbertonComputerScience</code> repository) are strictly <strong>Private</strong> to protect academic integrity and intellectual property.<br><br>
+            If you are a recruiter, academic reviewer, researcher, or collaborator and wish to <strong>request access</strong> to the private repository and data, please apply directly via email.
+          </p>
+        </div>
+      </div>
+      <div class="vault-actions">
+        <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault" class="btn btn-primary">
+          📧 Müraciət Et / Request Access via Email
+        </a>
+        <span class="email-chip">✉️ suleyman.hacizade1@gmail.com</span>
+      </div>
+    </div>
+  </section>
 
   <!-- MODULES -->
   <section id="modules">
     <h2>🗂️ Curriculum Modules</h2>
-    <p class="section-sub">All coursework modules completed during the intensive program</p>
+    <p class="section-sub">All coursework modules completed during the intensive program (stored in the private core vault)</p>
 
     <div class="modules-grid">
 
@@ -384,7 +520,7 @@
 
   <!-- ABOUT -->
   <section id="about">
-    <h2>👨‍💻 About the Author</h2>
+    <h2>👨‍💻 About the Author & Access Contact</h2>
     <p class="section-sub">Bioinformatics Researcher & Computational Biologist</p>
 
     <div class="about-card">
@@ -395,11 +531,13 @@
         <p>
           Equipped with a solid foundation from the intensive 9-month Holberton School Computer Science program,
           applying software engineering principles to computational biology, genomics, and multi-omics data analysis.
+          <br><br>
+          🔒 <strong>Private Data Access:</strong> Bu təşkilatdakı bütün kodlar və datalar məxfidir (private). Giriş (access) almaq üçün aşağıdakı elektron poçt ünvanına müraciət edə bilərsiniz.
         </p>
         <div class="about-links">
+          <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault">📧 Request Access: suleyman.hacizade1@gmail.com</a>
           <a href="https://github.com/SuleimanHajizadeh" target="_blank">🔗 Personal GitHub Profile</a>
           <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank">🏛️ Organization</a>
-          <a href="mailto:suleyman.hacizade1@gmail.com">📧 suleyman.hacizade1@gmail.com</a>
         </div>
       </div>
     </div>
@@ -411,6 +549,10 @@
       <a href="https://github.com/SuleimanHolbertonComputerScience">SuleimanHolbertonComputerScience</a> · 
       Holberton School Computer Science Archive · 
       <a href="https://github.com/SuleimanHajizadeh">Suleiman Hajizadeh</a>
+      <br />
+      <span style="display:inline-block; margin-top:0.5rem;">
+        🔒 Core data & repositories are <strong>Private</strong> — For access requests, contact: <a href="mailto:suleyman.hacizade1@gmail.com">suleyman.hacizade1@gmail.com</a>
+      </span>
     </p>
   </footer>
 
