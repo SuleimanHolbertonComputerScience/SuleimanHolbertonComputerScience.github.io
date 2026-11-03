@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Canonical Root URL -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suleimanholbertoncomputerscience.github.io/" />
+    <xhtml:link rel="alternate" hreflang="az" href="https://suleimanholbertoncomputerscience.github.io/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suleimanholbertoncomputerscience.github.io/" />
+    <image:image>
+      <image:loc>https://suleimanholbertoncomputerscience.github.io/logo.jpg</image:loc>
+      <image:title>SuleimanHolbertonComputerScience Official Logo</image:title>
+      <image:caption>Computer Science Foundations for Computational Biology and Bioinformatics</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Section: Private Data Access Request (#access) -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#access</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Section: Curriculum Modules (#modules) -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#modules</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Section: CS to Bioinformatics Bridge (#bridge) -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#bridge</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Section: Frequently Asked Questions (#faq) -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#faq</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Section: About Author & Leadership (#about) -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#about</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Specific Module Paths for Deep Search Engine Sitelinks -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-low-level-c</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-printf</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-binary-trees</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-sorting</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-simple-shell</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-higher-level-python</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-hbnb</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-devops-docker</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-network</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-web-react</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-web-backend</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-web-frontend</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#module-debugging</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Specific Bridge Deep Links -->
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#bridge-c-sequence-parsers</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#bridge-trees-phylogenetics</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://suleimanholbertoncomputerscience.github.io/#bridge-docker-workflows</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+</urlset>

@@ -1,39 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
+  <!-- ======================================================================= -->
+  <!-- Technical & Character Encoding Meta Tags                                -->
+  <!-- ======================================================================= -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SuleimanHolbertonComputerScience | CS Foundations Portfolio</title>
-  <meta name="description" content="Archival portfolio of Holberton School Computer Science coursework by Suleiman Hajizadeh — Bioinformatician & Computational Biologist. Core data is private; request access via email." />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0d1117" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+
+  <!-- ======================================================================= -->
+  <!-- Primary SEO Meta Tags (Google, Bing, Yahoo, DuckDuckGo, Yandex)         -->
+  <!-- ======================================================================= -->
+  <title>SuleimanHolbertonComputerScience | Holberton CS Foundations &amp; Bioinformatics Bridge</title>
+  <meta name="title" content="SuleimanHolbertonComputerScience | Holberton CS Foundations &amp; Bioinformatics Bridge" />
+  <meta name="description" content="Official portfolio &amp; coursework showcase for SuleimanHolbertonComputerScience. 9-month intensive Holberton School CS foundations bridging low-level systems programming, algorithms, and DevOps with computational biology. Request private repository access via email." />
+  <meta name="keywords" content="SuleimanHolbertonComputerScience, SuleimanHCS, Suleiman Hajizadeh, Holberton School, Holberton School Computer Science, Computer Science Foundations, Bioinformatics, Computational Biology, Systems Programming, Low Level C, Pointers Memory Layout, Custom printf, Binary Search Trees, AVL Trees, Sorting Algorithms, Simple Shell, UNIX Process Fork Exec, AirBnB Clone, hbnb, DevOps, Docker Containerization, Nginx Load Balancing, Network Protocols, TCP UDP Sockets, React TypeScript, Node.js Express, MongoDB, Biopython, Nextflow, Snakemake, HPC SLURM, Private Data Vault" />
+  <meta name="author" content="Suleiman Hajizadeh" />
+  <meta name="publisher" content="SuleimanHolbertonComputerScience" />
+  <meta name="copyright" content="Suleiman Hajizadeh" />
+  <meta name="application-name" content="SuleimanHolbertonComputerScience" />
+
+  <!-- Crawlers & Search Engine Directives -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="slurp" content="index, follow" />
+  <meta name="duckduckbot" content="index, follow" />
+  <meta name="baiduspider" content="index, follow" />
+  <meta name="yandex" content="index, follow" />
+  <meta name="rating" content="general" />
+  <meta name="distribution" content="global" />
+  <meta name="geo.region" content="AZ" />
+  <meta name="geo.placename" content="Baku" />
+  <meta name="geo.position" content="40.409264;49.867092" />
+  <meta name="ICBM" content="40.409264, 49.867092" />
+
+  <!-- ======================================================================= -->
+  <!-- Canonical & Multilingual Hreflang Tags                                  -->
+  <!-- ======================================================================= -->
+  <link rel="canonical" href="https://suleimanholbertoncomputerscience.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://suleimanholbertoncomputerscience.github.io/" />
+  <link rel="alternate" hreflang="az" href="https://suleimanholbertoncomputerscience.github.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://suleimanholbertoncomputerscience.github.io/" />
+
+  <!-- ======================================================================= -->
+  <!-- Open Graph Meta Tags (Facebook, LinkedIn, Discord, Telegram, WhatsApp)  -->
+  <!-- ======================================================================= -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SuleimanHolbertonComputerScience" />
+  <meta property="og:title" content="SuleimanHolbertonComputerScience | Holberton CS Foundations &amp; Bioinformatics Bridge" />
+  <meta property="og:description" content="9-month intensive Holberton School Computer Science foundations — bare-metal C, algorithms, DevOps, and web engineering powering computational biology. Request private data access." />
+  <meta property="og:url" content="https://suleimanholbertoncomputerscience.github.io/" />
+  <meta property="og:image" content="https://suleimanholbertoncomputerscience.github.io/logo.jpg" />
+  <meta property="og:image:secure_url" content="https://suleimanholbertoncomputerscience.github.io/logo.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:alt" content="SuleimanHolbertonComputerScience Official Logo — Glowing DNA Helix framed by Code Brackets on Midnight Navy" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="az_AZ" />
+
+  <!-- ======================================================================= -->
+  <!-- Twitter Cards (X Platform) Meta Tags                                    -->
+  <!-- ======================================================================= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SuleimanHCS" />
+  <meta name="twitter:creator" content="@SuleimanHajizadeh" />
+  <meta name="twitter:title" content="SuleimanHolbertonComputerScience | Holberton CS Foundations &amp; Bioinformatics Bridge" />
+  <meta name="twitter:description" content="9-month intensive Holberton School CS foundations bridging systems programming, algorithms, and DevOps with computational biology." />
+  <meta name="twitter:image" content="https://suleimanholbertoncomputerscience.github.io/logo.jpg" />
+  <meta name="twitter:image:alt" content="SuleimanHolbertonComputerScience Logo" />
+
+  <!-- ======================================================================= -->
+  <!-- Preconnect & Favicons & Web Manifest                                    -->
+  <!-- ======================================================================= -->
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
+  <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin />
+  <link rel="dns-prefetch" href="https://github.com" />
   <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.jpg" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- ======================================================================= -->
+  <!-- JSON-LD Structured Data (Schema.org / Google Rich Results)              -->
+  <!-- ======================================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://suleimanholbertoncomputerscience.github.io/#organization",
+        "name": "SuleimanHolbertonComputerScience",
+        "alternateName": ["SuleimanHCS", "Suleiman Holberton Computer Science"],
+        "url": "https://suleimanholbertoncomputerscience.github.io/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://suleimanholbertoncomputerscience.github.io/logo.jpg",
+          "caption": "SuleimanHolbertonComputerScience Official Logo",
+          "width": 1024,
+          "height": 1024
+        },
+        "description": "Centralized archive and knowledge hub for the 9-month intensive Computer Science and Software Engineering program at Holberton School, bridging systems programming with computational biology.",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://suleimanholbertoncomputerscience.github.io/#author",
+          "name": "Suleiman M. Hajizadeh",
+          "alternateName": "Süleyman Hacızadə",
+          "jobTitle": "Bioinformatician & Computational Biologist",
+          "url": "https://github.com/SuleimanHajizadeh",
+          "email": "suleyman.hacizade1@gmail.com",
+          "sameAs": [
+            "https://github.com/SuleimanHajizadeh",
+            "https://suleimanbioinformatics.github.io/",
+            "https://suleimancertificates.github.io/",
+            "https://suleimanielts.github.io/"
+          ]
+        },
+        "sameAs": [
+          "https://github.com/SuleimanHolbertonComputerScience",
+          "https://github.com/SuleimanHolbertonComputerScience/SuleimanHolbertonComputerScience",
+          "https://github.com/SuleimanHolbertonComputerScience/SuleimanHolbertonComputerScience.github.io",
+          "https://github.com/SuleimanHolbertonComputerScience/.github"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "suleyman.hacizade1@gmail.com",
+          "contactType": "Academic Access & Collaboration",
+          "availableLanguage": ["English", "Azerbaijani"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Baku",
+          "addressCountry": "AZ"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://suleimanholbertoncomputerscience.github.io/#website",
+        "url": "https://suleimanholbertoncomputerscience.github.io/",
+        "name": "SuleimanHolbertonComputerScience Portfolio",
+        "description": "Official portfolio of Holberton School Computer Science foundations engineered for computational biology.",
+        "publisher": {
+          "@id": "https://suleimanholbertoncomputerscience.github.io/#organization"
+        },
+        "inLanguage": ["en", "az"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://suleimanholbertoncomputerscience.github.io/#webpage",
+        "url": "https://suleimanholbertoncomputerscience.github.io/",
+        "name": "SuleimanHolbertonComputerScience | Holberton CS Foundations & Bioinformatics Bridge",
+        "isPartOf": {
+          "@id": "https://suleimanholbertoncomputerscience.github.io/#website"
+        },
+        "about": {
+          "@id": "https://suleimanholbertoncomputerscience.github.io/#organization"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://suleimanholbertoncomputerscience.github.io/logo.jpg"
+        },
+        "datePublished": "2026-10-26",
+        "dateModified": "2026-11-03",
+        "breadcrumb": {
+          "@id": "https://suleimanholbertoncomputerscience.github.io/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://suleimanholbertoncomputerscience.github.io/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://suleimanholbertoncomputerscience.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Curriculum Modules",
+            "item": "https://suleimanholbertoncomputerscience.github.io/#modules"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Bioinformatics Bridge",
+            "item": "https://suleimanholbertoncomputerscience.github.io/#bridge"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Private Data Access",
+            "item": "https://suleimanholbertoncomputerscience.github.io/#access"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "FAQ",
+            "item": "https://suleimanholbertoncomputerscience.github.io/#faq"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "About Author",
+            "item": "https://suleimanholbertoncomputerscience.github.io/#about"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://suleimanholbertoncomputerscience.github.io/#faqpage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is SuleimanHolbertonComputerScience?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SuleimanHolbertonComputerScience is the centralized repository and knowledge hub for all coursework, algorithms, and systems architectures completed during the intensive 9-month Computer Science and Software Engineering program at Holberton School by Suleiman Hajizadeh. It bridges low-level systems engineering with computational biology."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are the core source code and repositories private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The core repository containing 1,832+ commits and the 38+ page Obsidian LLM Wiki is maintained as Private to uphold academic integrity, prevent plagiarism of Holberton School curriculum solutions, and protect proprietary research architectures."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can recruiters, reviewers, or collaborators request access to the private data vault?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Verified recruiters, academic evaluators, and research collaborators can request read access to the private repositories by sending an email directly to suleyman.hacizade1@gmail.com with their affiliation and request details."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do Holberton School Computer Science foundations connect to Bioinformatics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Low-level C memory management powers zero-copy genomic sequence aligners like BLAST and BWA. Tree data structures (BST, AVL) underpin phylogenetic tree inference (Felsenstein's likelihood algorithm). Graph algorithms model de Bruijn genome assembly graphs. Docker and DevOps provide 100% computational reproducibility across Nextflow and Snakemake pipelines on HPC SLURM clusters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What core technical modules are included in this curriculum?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The curriculum encompasses 16 comprehensive modules including Low-Level C Programming, Custom Printf, Binary Trees, Sorting Algorithms, UNIX Simple Shell, Higher-Level Python OOP, AirBnB Clone (hbnb), DevOps & Docker, Network Protocols, React & TypeScript Web Front-End, Node.js & MongoDB Web Back-End, and Polyglot Debugging."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://suleimanholbertoncomputerscience.github.io/#curriculum-list",
+        "name": "Holberton School Computer Science Modules",
+        "numberOfItems": 9,
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "position": 1,
+            "name": "Low-Level Programming & C",
+            "description": "Virtual memory layout, pointer arithmetic, dynamic heap allocation (malloc/free), bit manipulation, and POSIX system calls.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 2,
+            "name": "Custom printf Engine",
+            "description": "From-scratch variadic function engine with 1024-byte user-space buffering and formatted specifier dispatch tables.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 3,
+            "name": "Binary Trees & Self-Balancing Structures",
+            "description": "Binary Search Trees (BST), AVL self-balancing rotations, Binary Heaps, and mathematical proof of logarithmic height bounds.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 4,
+            "name": "Sorting Algorithms & Complexity Analysis",
+            "description": "Comprehensive implementation of Bubble, Insertion, Quick, Merge, and Heap sorts with Big-O time and space proofs.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 5,
+            "name": "UNIX Simple Shell Interpreter",
+            "description": "POSIX command interpreter implementing fork(), execve(), waitpid(), copy-on-write semantics, PATH resolution, and signal traps.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 6,
+            "name": "Higher-Level Python & Database ORM",
+            "description": "Object-Oriented Programming (OOP), Test-Driven Development (TDD), relational SQL schema modeling, and SQLAlchemy ORM.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 7,
+            "name": "AirBnB Clone (hbnb) Full-Stack Suite",
+            "description": "Multi-phase MVC application: CLI interpreter, MySQL relational database engine, Flask web application, and RESTful API.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 8,
+            "name": "DevOps, Linux Systems & Docker",
+            "description": "Linux server administration, idempotent Bash deployment automation, Nginx reverse proxy load balancing, and Docker containerization.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          },
+          {
+            "@type": "Course",
+            "position": 9,
+            "name": "Network Protocols & Distributed Architecture",
+            "description": "OSI 7-layer and TCP/IP models, TCP 3-way handshakes, UDP datagrams, socket programming, and HTTP/HTTPS lifecycles.",
+            "provider": { "@type": "Organization", "name": "Holberton School" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ======================================================================= -->
+  <!-- CSS Stylesheet & Modern Dark UI Design System                           -->
+  <!-- ======================================================================= -->
   <style>
     :root {
       --bg: #0d1117;
       --surface: #161b22;
+      --surface-elevated: #1f242c;
       --border: #30363d;
+      --border-accent: rgba(0, 212, 255, 0.3);
       --cyan: #00d4ff;
       --purple: #7c3aed;
       --amber: #f59e0b;
       --text: #e6edf3;
+      --text-bright: #ffffff;
       --muted: #8b949e;
       --green: #3fb950;
+      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+      font-family: var(--font-main);
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* NAV */
-    nav {
+    /* Accessibility Skip Link */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      background: var(--cyan);
+      color: #000;
+      padding: 8px 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+      transition: top 0.2s;
+    }
+    .skip-to-content:focus { top: 10px; }
+
+    /* Sticky Navigation Header */
+    nav.site-nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(13,17,23,0.92);
-      backdrop-filter: blur(12px);
+      background: rgba(13, 17, 23, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       padding: 0 2rem;
       display: flex; align-items: center; justify-content: space-between;
@@ -46,72 +399,84 @@
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
       text-decoration: none;
+      letter-spacing: -0.01em;
     }
     .nav-brand img {
-      width: 34px; height: 34px; border-radius: 50%;
+      width: 36px; height: 36px; border-radius: 50%;
       border: 1.5px solid var(--cyan);
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+      display: block;
     }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
-    .nav-links a:hover { color: var(--text); }
+    .nav-links { display: flex; gap: 1.35rem; align-items: center; list-style: none; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.9rem;
+      font-weight: 500; transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text-bright); }
     .nav-links a.nav-access {
       color: var(--amber);
-      border: 1px solid rgba(245,158,11,0.4);
-      padding: 0.3rem 0.75rem;
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      padding: 0.35rem 0.85rem;
       border-radius: 999px;
-      background: rgba(245,158,11,0.08);
+      background: rgba(245, 158, 11, 0.08);
       font-weight: 600;
       font-size: 0.82rem;
+      display: inline-flex; align-items: center; gap: 0.3rem;
     }
     .nav-links a.nav-access:hover {
-      background: rgba(245,158,11,0.18);
+      background: rgba(245, 158, 11, 0.2);
       border-color: var(--amber);
+      color: #fff;
     }
 
-    /* HERO */
+    /* Hero Section */
     .hero {
-      min-height: 90vh;
+      min-height: 88vh;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       text-align: center;
-      padding: 4rem 2rem;
+      padding: 4.5rem 2rem 3rem;
       position: relative; overflow: hidden;
     }
     .hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,255,0.08) 0%, transparent 70%),
-                  radial-gradient(ellipse 60% 40% at 80% 80%, rgba(124,58,237,0.08) 0%, transparent 60%);
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 212, 255, 0.1) 0%, transparent 70%),
+                  radial-gradient(ellipse 60% 40% at 80% 80%, rgba(124, 58, 237, 0.09) 0%, transparent 60%);
       pointer-events: none;
     }
     .hero-logo {
       width: 140px; height: 140px; border-radius: 28px;
-      border: 2px solid rgba(0,212,255,0.4);
-      box-shadow: 0 0 35px rgba(0,212,255,0.3), 0 0 70px rgba(124,58,237,0.2);
+      border: 2px solid rgba(0, 212, 255, 0.45);
+      box-shadow: 0 0 35px rgba(0, 212, 255, 0.35), 0 0 70px rgba(124, 58, 237, 0.25);
       margin-bottom: 1.75rem;
-      transition: transform .3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
+      display: block;
     }
     .hero-logo:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 45px rgba(0, 212, 255, 0.5), 0 0 85px rgba(124, 58, 237, 0.35);
     }
     .hero-badge {
-      display: inline-block;
-      padding: 0.35rem 1.1rem;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.35rem 1.15rem;
       border: 1px solid var(--cyan);
       border-radius: 999px;
       font-size: 0.8rem;
+      font-weight: 600;
       color: var(--cyan);
       margin-bottom: 1.5rem;
       letter-spacing: 0.05em;
-      background: rgba(0,212,255,0.05);
+      background: rgba(0, 212, 255, 0.06);
       position: relative;
     }
     .hero h1 {
-      font-size: clamp(2rem, 6vw, 3.8rem);
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       position: relative;
+      letter-spacing: -0.02em;
     }
     .hero h1 span {
       background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
@@ -120,438 +485,650 @@
     }
     .hero p {
       font-size: 1.15rem; color: var(--muted);
-      max-width: 640px; margin: 0 auto 2rem;
+      max-width: 680px; margin: 0 auto 2rem;
       position: relative;
+      line-height: 1.65;
     }
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; position: relative; }
     .btn {
       padding: 0.75rem 1.6rem;
       border-radius: 8px; font-size: 0.95rem; font-weight: 600;
       text-decoration: none; cursor: pointer; border: none;
-      transition: transform .15s, box-shadow .15s;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      display: inline-flex; align-items: center; gap: 0.5rem;
     }
     .btn:hover { transform: translateY(-2px); }
     .btn-primary {
       background: linear-gradient(135deg, var(--cyan), var(--purple));
       color: #fff;
-      box-shadow: 0 0 20px rgba(0,212,255,0.3);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
     }
     .btn-access {
-      background: rgba(245,158,11,0.14);
+      background: rgba(245, 158, 11, 0.14);
       border: 1px solid var(--amber);
       color: #fde68a;
     }
     .btn-access:hover {
-      background: rgba(245,158,11,0.25);
-      box-shadow: 0 0 20px rgba(245,158,11,0.25);
+      background: rgba(245, 158, 11, 0.25);
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+      color: #fff;
     }
     .btn-secondary {
       background: transparent;
       border: 1px solid var(--border);
       color: var(--text);
     }
-    .btn-secondary:hover { border-color: var(--cyan); }
+    .btn-secondary:hover { border-color: var(--cyan); color: #fff; }
 
     .hero-private-pill {
-      margin-top: 1.75rem;
-      padding: 0.65rem 1.25rem;
+      margin-top: 2rem;
+      padding: 0.75rem 1.35rem;
       border-radius: 10px;
-      background: rgba(22,27,34,0.85);
-      border: 1px solid rgba(245,158,11,0.35);
-      font-size: 0.86rem;
+      background: rgba(22, 27, 34, 0.88);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      font-size: 0.88rem;
       color: var(--muted);
-      max-width: 680px;
+      max-width: 720px;
       position: relative;
+      line-height: 1.5;
     }
     .hero-private-pill strong { color: #fde68a; }
     .hero-private-pill a { color: var(--cyan); text-decoration: none; font-weight: 600; }
     .hero-private-pill a:hover { text-decoration: underline; }
 
-    /* STATS */
+    /* Stats Strip */
     .stats {
       display: flex; justify-content: center; gap: 3.5rem; flex-wrap: wrap;
       padding: 2.2rem 2rem;
       border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      background: rgba(22,27,34,0.4);
+      background: rgba(22, 27, 34, 0.45);
     }
     .stat { text-align: center; }
-    .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--cyan); }
-    .stat-label { font-size: 0.85rem; color: var(--muted); }
+    .stat-num { font-size: 2.3rem; font-weight: 800; color: var(--cyan); line-height: 1.1; }
+    .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; font-weight: 500; }
 
-    /* SECTIONS */
-    section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
-    h2 {
-      font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;
+    /* Content Sections Layout */
+    main section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
     }
-    .section-sub { color: var(--muted); margin-bottom: 2.5rem; }
+    h2.section-title {
+      font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.01em;
+    }
+    p.section-sub {
+      color: var(--muted); margin-bottom: 2.5rem; font-size: 1rem;
+    }
 
-    /* PRIVATE VAULT BANNER SECTION */
+    /* Private Vault & Access Banner */
     .vault-banner {
-      background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(124,58,237,0.1) 100%);
-      border: 1px solid rgba(245,158,11,0.4);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.09) 0%, rgba(124, 58, 237, 0.12) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.45);
       border-radius: 18px;
       padding: 2.5rem;
-      position: relative;
-      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
     }
     .vault-header {
-      display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+      display: flex; align-items: center; gap: 1rem; margin-bottom: 1.35rem; flex-wrap: wrap;
     }
     .vault-badge {
-      background: rgba(245,158,11,0.2);
+      background: rgba(245, 158, 11, 0.22);
       border: 1px solid var(--amber);
       color: #fde68a;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      padding: 0.25rem 0.75rem;
+      padding: 0.3rem 0.85rem;
       border-radius: 999px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
+      display: inline-flex; align-items: center; gap: 0.35rem;
     }
     .vault-grid {
-      display: grid; gap: 1.5rem; margin-bottom: 1.75rem;
+      display: grid; gap: 1.5rem; margin-bottom: 1.85rem;
     }
     @media (min-width: 768px) { .vault-grid { grid-template-columns: 1fr 1fr; } }
     .vault-lang-box {
-      background: rgba(13,17,23,0.75);
+      background: rgba(13, 17, 23, 0.8);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.35rem;
+      padding: 1.5rem;
     }
     .vault-lang-box h3 {
-      font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text);
+      font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-bright);
     }
     .vault-lang-box p {
-      font-size: 0.9rem; color: var(--muted); line-height: 1.6;
+      font-size: 0.92rem; color: var(--muted); line-height: 1.65;
     }
     .vault-actions {
       display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
-      padding-top: 0.5rem;
     }
     .email-chip {
       display: inline-flex; align-items: center; gap: 0.6rem;
       background: var(--bg);
       border: 1px solid var(--border);
-      padding: 0.65rem 1.1rem;
+      padding: 0.7rem 1.15rem;
       border-radius: 8px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.9rem;
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
       color: var(--cyan);
+      user-select: all;
     }
 
-    /* MODULE CARDS */
+    /* Modules Grid */
     .modules-grid { display: grid; gap: 1.5rem; }
     @media (min-width: 700px) { .modules-grid { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 1000px) { .modules-grid { grid-template-columns: 1fr 1fr 1fr; } }
 
-    .card {
+    article.card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.6rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      display: flex; flex-direction: column;
+    }
+    article.card:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.12);
+      transform: translateY(-2px);
+    }
+    .card-icon { font-size: 2.2rem; margin-bottom: 0.85rem; line-height: 1; }
+    .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.45rem; color: var(--text-bright); }
+    .card p { font-size: 0.9rem; color: var(--muted); line-height: 1.55; flex: 1; }
+    .card-lang {
+      display: inline-block;
+      margin-top: 1rem; padding: 0.25rem 0.7rem;
+      border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+      background: rgba(0, 212, 255, 0.1); color: var(--cyan);
+      align-self: flex-start;
+    }
+
+    /* Bioinformatics Bridge Grid */
+    .bridge-grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 700px) { .bridge-grid { grid-template-columns: 1fr 1fr; } }
+    article.bridge-item {
+      display: flex; gap: 1.15rem; align-items: flex-start;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.35rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    article.bridge-item:hover {
+      border-color: var(--purple);
+      transform: translateY(-2px);
+    }
+    .bridge-icon { font-size: 1.7rem; flex-shrink: 0; line-height: 1.2; }
+    .bridge-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-bright); }
+    .bridge-item p { font-size: 0.86rem; color: var(--muted); line-height: 1.55; }
+
+    /* FAQ Section Accordion */
+    .faq-container { display: flex; flex-direction: column; gap: 1rem; }
+    details.faq-item {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.5rem;
-      transition: border-color .2s, box-shadow .2s;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
     }
-    .card:hover {
+    details.faq-item[open] {
       border-color: var(--cyan);
-      box-shadow: 0 0 20px rgba(0,212,255,0.1);
     }
-    .card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
-    .card p { font-size: 0.87rem; color: var(--muted); line-height: 1.5; }
-    .card-lang {
-      display: inline-block;
-      margin-top: 0.75rem; padding: 0.2rem 0.6rem;
-      border-radius: 999px; font-size: 0.75rem; font-weight: 600;
-      background: rgba(0,212,255,0.1); color: var(--cyan);
+    summary.faq-question {
+      padding: 1.25rem 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      cursor: pointer;
+      list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+      user-select: none;
     }
+    summary.faq-question::-webkit-details-marker { display: none; }
+    summary.faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--cyan);
+      transition: transform 0.2s ease;
+    }
+    details.faq-item[open] summary.faq-question::after {
+      content: '−';
+      color: var(--amber);
+    }
+    .faq-answer {
+      padding: 0 1.5rem 1.35rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+      border-top: 1px solid rgba(48, 54, 61, 0.5);
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+    }
+    .faq-answer strong { color: var(--text); }
+    .faq-answer a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+    .faq-answer a:hover { text-decoration: underline; }
 
-    /* BIO BRIDGE */
-    .bridge-grid { display: grid; gap: 1rem; }
-    @media (min-width: 700px) { .bridge-grid { grid-template-columns: 1fr 1fr; } }
-    .bridge-item {
-      display: flex; gap: 1rem; align-items: flex-start;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; padding: 1.25rem;
-    }
-    .bridge-icon { font-size: 1.5rem; flex-shrink: 0; }
-    .bridge-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
-    .bridge-item p { font-size: 0.83rem; color: var(--muted); }
-
-    /* ABOUT */
+    /* About Card */
     .about-card {
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 16px; padding: 2.5rem;
+      border-radius: 18px; padding: 2.5rem;
       display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;
     }
     .about-avatar {
-      width: 90px; height: 90px; border-radius: 50%;
+      width: 96px; height: 96px; border-radius: 50%;
       border: 2px solid var(--cyan);
       object-fit: cover;
-      box-shadow: 0 0 20px rgba(0,212,255,0.3);
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.35);
+      flex-shrink: 0;
+      display: block;
     }
-    .about-text { flex: 1; min-width: 260px; }
-    .about-text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; }
-    .about-text .role { color: var(--cyan); font-size: 0.9rem; margin-bottom: 0.8rem; }
-    .about-text p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem; }
-    .about-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .about-text { flex: 1; min-width: 280px; }
+    .about-text h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--text-bright); }
+    .about-text .role { color: var(--cyan); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.85rem; }
+    .about-text p { color: var(--muted); font-size: 0.94rem; margin-bottom: 1.25rem; line-height: 1.65; }
+    .about-links { display: flex; gap: 0.85rem; flex-wrap: wrap; }
     .about-links a {
-      padding: 0.45rem 1rem;
-      border: 1px solid var(--border); border-radius: 6px;
-      text-decoration: none; color: var(--text); font-size: 0.85rem;
-      transition: border-color .2s, color .2s;
+      padding: 0.5rem 1.1rem;
+      border: 1px solid var(--border); border-radius: 8px;
+      text-decoration: none; color: var(--text); font-size: 0.88rem; font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
     }
-    .about-links a:hover { border-color: var(--cyan); color: var(--cyan); }
+    .about-links a:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0, 212, 255, 0.05); }
 
-    /* FOOTER */
+    /* Footer */
     footer {
       border-top: 1px solid var(--border);
-      padding: 2.5rem 2rem; text-align: center;
-      color: var(--muted); font-size: 0.85rem;
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      background: rgba(13, 17, 23, 0.98);
     }
     footer a { color: var(--cyan); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-nav {
+      display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+      margin-bottom: 1.5rem; list-style: none;
+    }
+    .footer-nav a { color: var(--muted); font-size: 0.85rem; }
+    .footer-nav a:hover { color: var(--text); }
 
-    /* GLOW DOTS */
+    /* Animated Pulsing Status Dot */
     .dot {
       display: inline-block; width: 8px; height: 8px;
       border-radius: 50%; background: var(--green);
-      margin-right: 6px; animation: pulse 2s infinite;
+      animation: pulse 2s infinite ease-in-out;
     }
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#" class="nav-brand">
-      <img src="logo.jpg" alt="SuleimanHCS Logo" />
-      <span>SuleimanHolbertonComputerScience</span>
-    </a>
-    <div class="nav-links">
-      <a href="#modules">Modules</a>
-      <a href="#bridge">Bioinformatics Bridge</a>
-      <a href="#access" class="nav-access">🔒 Private Data & Access</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank">GitHub Org ↗</a>
-    </div>
-  </nav>
+  <!-- Screen Reader Skip Link for Semantic Accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to primary content</a>
 
-  <!-- HERO -->
-  <div class="hero">
-    <img src="logo.jpg" alt="SuleimanHolbertonComputerScience" class="hero-logo" />
-    <div class="hero-badge"><span class="dot"></span> Holberton School · 9-Month CS Program Archive</div>
-    <h1>CS Foundations for<br><span>Computational Biology</span></h1>
-    <p>A complete archive of low-level systems programming, algorithms, full-stack architectures, and DevOps coursework — providing the engineering backbone for modern bioinformatics.</p>
-    <div class="hero-cta">
-      <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank" class="btn btn-primary">🏛️ View Organization</a>
-      <a href="#access" class="btn btn-access">🔒 Request Private Data Access</a>
-      <a href="#modules" class="btn btn-secondary">Explore Modules ↓</a>
-    </div>
-    <div class="hero-private-pill">
-      🔒 <strong>Məxfilik Qeydi / Privacy Notice:</strong> Buradakı əsas kod bazası və datalar <strong>Private (Məxfi)</strong> saxlanılır. Giriş (access) əldə etmək üçün e-poçt vasitəsilə müraciət edə bilərsiniz: <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault">suleyman.hacizade1@gmail.com</a>
-    </div>
-  </div>
+  <!-- Header Navigation -->
+  <header>
+    <nav class="site-nav" aria-label="Primary Site Navigation">
+      <a href="https://suleimanholbertoncomputerscience.github.io/" class="nav-brand" title="SuleimanHolbertonComputerScience Homepage">
+        <img src="logo.jpg" alt="SuleimanHolbertonComputerScience Icon" width="36" height="36" />
+        <span>SuleimanHolbertonComputerScience</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#modules">Curriculum Modules</a></li>
+        <li><a href="#bridge">Bioinformatics Bridge</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#access" class="nav-access" title="Request Access to Private Data">🔒 Private Access</a></li>
+        <li><a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank" rel="noopener noreferrer">GitHub Org ↗</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat"><div class="stat-num">9</div><div class="stat-label">Months Intensive Study</div></div>
-    <div class="stat"><div class="stat-num">16+</div><div class="stat-label">Coursework Modules</div></div>
-    <div class="stat"><div class="stat-num">38+</div><div class="stat-label">LLM Wiki Pages</div></div>
-    <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Core Languages</div></div>
-  </div>
+  <!-- Main Landmark -->
+  <main id="main-content">
 
-  <!-- PRIVATE DATA & ACCESS REQUEST SECTION -->
-  <section id="access" style="padding-bottom: 1rem;">
-    <div class="vault-banner">
-      <div class="vault-header">
-        <span class="vault-badge">🔒 Private Repository & Data Vault</span>
-        <h2 style="margin: 0; font-size: 1.55rem;">Məxfi Məlumat Bazası və Giriş İcazəsi (Request Access)</h2>
+    <!-- Hero Landmark Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img src="logo.jpg" alt="SuleimanHolbertonComputerScience Official Logo — DNA Double Helix with Code Brackets" class="hero-logo" width="140" height="140" fetchpriority="high" />
+      <div class="hero-badge">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Holberton School · 9-Month Intensive CS Foundations Archive</span>
       </div>
-      <div class="vault-grid">
-        <div class="vault-lang-box">
-          <h3>🇦🇿 Azərbaycan dilində</h3>
-          <p>
-            Bu təşkilatın daxilindəki əsas mənbə kodları, 16 modul üzrə tapşırıq həlləri, daxili datalar və 38+ sənədlik <strong>Obsidian LLM Wiki</strong> bilik şəbəkəsi (<code>SuleimanHolbertonComputerScience</code> repozitoriyası) akademik bütövlük və müəllif hüquqlarının qorunması məqsədilə <strong>Private (Məxfi)</strong> olaraq saxlanılır.<br><br>
-            Əgər işə qəbul (recruitment), akademik qiymətləndirmə, elmi tədqiqat və ya əməkdaşlıq üçün bu məlumatlara <strong>giriş icazəsi (access)</strong> almaq istəyirsinizsə, elektron poçt ünvanıma müraciət edə bilərsiniz.
-          </p>
-        </div>
-        <div class="vault-lang-box">
-          <h3>🇬🇧 In English</h3>
-          <p>
-            All core source code, raw coursework implementations, project datasets, and the internal 38+ page <strong>Obsidian LLM Wiki</strong> knowledge graph (housed in the <code>SuleimanHolbertonComputerScience</code> repository) are strictly <strong>Private</strong> to protect academic integrity and intellectual property.<br><br>
-            If you are a recruiter, academic reviewer, researcher, or collaborator and wish to <strong>request access</strong> to the private repository and data, please apply directly via email.
-          </p>
-        </div>
-      </div>
-      <div class="vault-actions">
-        <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault" class="btn btn-primary">
-          📧 Müraciət Et / Request Access via Email
+      <h1 id="hero-title">Computer Science Foundations for<br /><span>Computational Biology</span></h1>
+      <p>
+        A rigorous academic and engineering portfolio documenting low-level C memory management, algorithm design, full-stack microservices, and containerized DevOps — providing the foundational engineering backbone for modern high-throughput genomics.
+      </p>
+      <div class="hero-cta">
+        <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          🏛️ View GitHub Organization
         </a>
-        <span class="email-chip">✉️ suleyman.hacizade1@gmail.com</span>
+        <a href="#access" class="btn btn-access">
+          🔒 Request Private Data Access
+        </a>
+        <a href="#modules" class="btn btn-secondary">
+          Explore 16 Modules ↓
+        </a>
       </div>
-    </div>
-  </section>
-
-  <!-- MODULES -->
-  <section id="modules">
-    <h2>🗂️ Curriculum Modules</h2>
-    <p class="section-sub">All coursework modules completed during the intensive program (stored in the private core vault)</p>
-
-    <div class="modules-grid">
-
-      <div class="card">
-        <div class="card-icon">⚙️</div>
-        <h3>Low-Level Programming & C</h3>
-        <p>Memory layout, pointer arithmetic, dynamic allocation, structures, bit manipulation, and system calls.</p>
-        <span class="card-lang">C · Valgrind</span>
+      <div class="hero-private-pill">
+        🔒 <strong>Məxfilik Qeydi / Privacy Notice:</strong> Bu təşkilatdakı bütün xam mənbə kodları, 16 modul üzrə tapşırıqlar və daxili <strong>Obsidian LLM Wiki</strong> arxivi <strong>Private (Məxfi)</strong> saxlanılır. Rekruterlər və elmi tərəfdaşlar giriş icazəsi (access) almaq üçün e-poçtla müraciət edə bilərlər: 
+        <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault">suleyman.hacizade1@gmail.com</a>
       </div>
+    </section>
 
-      <div class="card">
-        <div class="card-icon">🖨️</div>
-        <h3>Custom printf</h3>
-        <p>From-scratch implementation of the standard C <code>printf</code> with specifiers (%d, %s, %c, %x, %p) and buffer handling.</p>
-        <span class="card-lang">C</span>
+    <!-- Stats Section -->
+    <section class="stats" aria-label="Curriculum Statistics">
+      <div class="stat">
+        <div class="stat-num">9</div>
+        <div class="stat-label">Months Intensive Study</div>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🌲</div>
-        <h3>Binary Trees & Sorting</h3>
-        <p>Binary Search Trees, AVL balance rotations, traversals (pre/in/post-order), Quick sort, Merge sort, and Big-O efficiency.</p>
-        <span class="card-lang">C · Algorithms</span>
+      <div class="stat">
+        <div class="stat-num">16+</div>
+        <div class="stat-label">Coursework Modules</div>
       </div>
-
-      <div class="card">
-        <div class="card-icon">💲</div>
-        <h3>UNIX Shell Interpreter</h3>
-        <p>Command line interpreter: process management with <code>fork</code>/<code>execve</code>, signal handling, paths, and builtins.</p>
-        <span class="card-lang">C · POSIX</span>
+      <div class="stat">
+        <div class="stat-num">1,832+</div>
+        <div class="stat-label">Git Commit History</div>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🐍</div>
-        <h3>Higher-Level Python</h3>
-        <p>Object-Oriented Programming (OOP), file serialization (JSON), unit testing (unittest), SQL ORM, and REST APIs.</p>
-        <span class="card-lang">Python · SQL</span>
+      <div class="stat">
+        <div class="stat-num">38+</div>
+        <div class="stat-label">Obsidian LLM Wiki Pages</div>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🏠</div>
-        <h3>AirBnB Clone (hbnb)</h3>
-        <p>Full-stack project: CLI console interpreter, Flask web framework, MySQL database engine, and HTML/CSS presentation.</p>
-        <span class="card-lang">Python · Flask · MySQL</span>
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Core Languages (C, Python, JS, Bash, SQL)</div>
       </div>
+    </section>
 
-      <div class="card">
-        <div class="card-icon">🐳</div>
-        <h3>DevOps & Docker</h3>
-        <p>Automated deployment, configuration management, Nginx load balancers, SSL certificates, and Docker containerization.</p>
-        <span class="card-lang">Bash · Docker · Nginx</span>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🌐</div>
-        <h3>Network Protocols</h3>
-        <p>OSI 7 layers, TCP/IP, UDP sockets, DNS resolution, HTTP request/response lifecycles, and network security.</p>
-        <span class="card-lang">Networking · Bash</span>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">⚛️</div>
-        <h3>Web Engineering</h3>
-        <p>Responsive design, modern React hooks, Node.js server runtimes, Express routing, and MongoDB document databases.</p>
-        <span class="card-lang">React · Node.js · MongoDB</span>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BIOINFORMATICS BRIDGE -->
-  <section id="bridge" style="background: linear-gradient(180deg, transparent, rgba(0,212,255,0.03), transparent); border-radius: 24px;">
-    <h2>🔬 CS Foundations → Bioinformatics Bridge</h2>
-    <p class="section-sub">How each computer science domain directly powers high-throughput bioinformatics & computational biology</p>
-
-    <div class="bridge-grid">
-      <div class="bridge-item">
-        <div class="bridge-icon">🧠</div>
-        <div>
-          <h4>C Memory Management → Sequence Parsers</h4>
-          <p>Direct pointer manipulation and heap optimization are required to build high-performance genomic aligners like BLAST, BWA, and Bowtie.</p>
+    <!-- Section: Private Data Access Request (#access) -->
+    <section id="access" aria-labelledby="access-title">
+      <div class="vault-banner">
+        <div class="vault-header">
+          <span class="vault-badge">🔒 Private Repository &amp; Data Vault</span>
+          <h2 id="access-title" style="margin: 0; font-size: 1.6rem; color: #fff;">Məxfi Məlumat Bazası və Giriş İcazəsi (Request Access)</h2>
+        </div>
+        <div class="vault-grid">
+          <div class="vault-lang-box">
+            <h3>🇦🇿 Azərbaycan dilində</h3>
+            <p>
+              Bu təşkilatın daxilindəki əsas mənbə kodları, 16 modul üzrə tapşırıq həlləri, daxili datalar və 38+ sənədlik <strong>Obsidian LLM Wiki</strong> bilik şəbəkəsi (<code>SuleimanHolbertonComputerScience</code> repozitoriyası) akademik bütövlük və müəllif hüquqlarının qorunması məqsədilə <strong>Private (Məxfi)</strong> olaraq saxlanılır.<br /><br />
+              Əgər işə qəbul (recruitment), akademik qiymətləndirmə, elmi tədqiqat və ya əməkdaşlıq üçün bu məlumatlara <strong>giriş icazəsi (access)</strong> almaq istəyirsinizsə, elektron poçt ünvanıma birbaşa müraciət edə bilərsiniz.
+            </p>
+          </div>
+          <div class="vault-lang-box">
+            <h3>🇬🇧 In English</h3>
+            <p>
+              All core source code, raw coursework implementations, project datasets, and the internal 38+ page <strong>Obsidian LLM Wiki</strong> knowledge graph (housed in the <code>SuleimanHolbertonComputerScience</code> repository) are strictly <strong>Private</strong> to protect academic integrity and intellectual property.<br /><br />
+              If you are a recruiter, academic reviewer, researcher, or collaborator and wish to <strong>request access</strong> to the private repository and data, please apply directly via email.
+            </p>
+          </div>
+        </div>
+        <div class="vault-actions">
+          <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault" class="btn btn-primary">
+            📧 Müraciət Et / Request Access via Email
+          </a>
+          <span class="email-chip" title="Click to copy email">✉️ suleyman.hacizade1@gmail.com</span>
         </div>
       </div>
-      <div class="bridge-item">
-        <div class="bridge-icon">🌳</div>
-        <div>
-          <h4>Trees & Graph Algorithms → Phylogenetics</h4>
-          <p>Tree traversals and shortest-path graph algorithms are the mathematical foundation of phylogenetic trees and de Bruijn genome assembly graphs.</p>
-        </div>
-      </div>
-      <div class="bridge-item">
-        <div class="bridge-icon">🐳</div>
-        <div>
-          <h4>Docker & DevOps → Reproducible Workflows</h4>
-          <p>Containerizing software environments guarantees 100% scientific reproducibility across HPC clusters, Nextflow, and Snakemake pipelines.</p>
-        </div>
-      </div>
-      <div class="bridge-item">
-        <div class="bridge-icon">🐍</div>
-        <div>
-          <h4>Python OOP → Omics Tooling</h4>
-          <p>Object-oriented abstractions allow structured handling of complex biological entities: gene features, FASTA records, and BAM alignments.</p>
-        </div>
-      </div>
-      <div class="bridge-item">
-        <div class="bridge-icon">🔌</div>
-        <div>
-          <h4>REST APIs → Biological Databases</h4>
-          <p>API client design enables programmatic access to NCBI E-utilities, Ensembl REST, UniProt, ClinVar, and AlphaFold databases.</p>
-        </div>
-      </div>
-      <div class="bridge-item">
-        <div class="bridge-icon">🖥️</div>
-        <div>
-          <h4>System Engineering → HPC Clusters</h4>
-          <p>Linux administration, bash scripting, and process control are crucial for managing SLURM job arrays and high-throughput sequencing runs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>👨‍💻 About the Author & Access Contact</h2>
-    <p class="section-sub">Bioinformatics Researcher & Computational Biologist</p>
+    <!-- Section: Curriculum Modules (#modules) -->
+    <section id="modules" aria-labelledby="modules-title">
+      <h2 id="modules-title" class="section-title">🗂️ Curriculum Modules</h2>
+      <p class="section-sub">Comprehensive architectural breakdown of all coursework modules completed during the intensive Holberton School program (maintained in the private vault)</p>
 
-    <div class="about-card">
-      <img src="logo.jpg" alt="Suleiman Hajizadeh" class="about-avatar" />
-      <div class="about-text">
-        <h3>Suleiman Hajizadeh</h3>
-        <div class="role">Bioinformatician & Computational Biologist</div>
-        <p>
-          Equipped with a solid foundation from the intensive 9-month Holberton School Computer Science program,
-          applying software engineering principles to computational biology, genomics, and multi-omics data analysis.
-          <br><br>
-          🔒 <strong>Private Data Access:</strong> Bu təşkilatdakı bütün kodlar və datalar məxfidir (private). Giriş (access) almaq üçün aşağıdakı elektron poçt ünvanına müraciət edə bilərsiniz.
-        </p>
-        <div class="about-links">
-          <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault">📧 Request Access: suleyman.hacizade1@gmail.com</a>
-          <a href="https://github.com/SuleimanHajizadeh" target="_blank">🔗 Personal GitHub Profile</a>
-          <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank">🏛️ Organization</a>
+      <div class="modules-grid">
+
+        <article class="card" id="module-low-level-c">
+          <div class="card-icon" aria-hidden="true">⚙️</div>
+          <h3>Low-Level Programming &amp; C</h3>
+          <p>Direct virtual memory layout, 64-bit pointer arithmetic, dynamic heap allocations (<code>malloc</code>/<code>free</code>), structures, bitwise masking, and hardware-level execution.</p>
+          <span class="card-lang">C · Valgrind</span>
+        </article>
+
+        <article class="card" id="module-printf">
+          <div class="card-icon" aria-hidden="true">🖨️</div>
+          <h3>Custom printf Engine</h3>
+          <p>From-scratch implementation of the standard C <code>printf</code> with 1024-byte user-space buffering, variadic argument handling (<code>va_list</code>), and specifier dispatch tables.</p>
+          <span class="card-lang">C · System Calls</span>
+        </article>
+
+        <article class="card" id="module-binary-trees">
+          <div class="card-icon" aria-hidden="true">🌲</div>
+          <h3>Binary Trees &amp; AVL Balancing</h3>
+          <p>Binary Search Trees (BST), AVL self-balancing rotations (LL, RR, LR, RL), Binary Heaps, and mathematical proof of logarithmic height bounds.</p>
+          <span class="card-lang">C · Algorithms</span>
+        </article>
+
+        <article class="card" id="module-sorting">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3>Sorting Algorithms &amp; Complexity</h3>
+          <p>Bubble, Insertion, Quick (Lomuto), Merge, and Heap sorts. Proof of the $\Omega(N \log N)$ comparison sort lower bound and linear Counting Sort.</p>
+          <span class="card-lang">C · Big-O Analysis</span>
+        </article>
+
+        <article class="card" id="module-simple-shell">
+          <div class="card-icon" aria-hidden="true">💲</div>
+          <h3>UNIX Simple Shell Interpreter</h3>
+          <p>POSIX command-line interpreter: process forking (<code>fork</code>), execution (<code>execve</code>), Copy-on-Write (COW), signal trapping, and PATH resolution.</p>
+          <span class="card-lang">C · POSIX · Linux</span>
+        </article>
+
+        <article class="card" id="module-higher-level-python">
+          <div class="card-icon" aria-hidden="true">🐍</div>
+          <h3>Higher-Level Python &amp; ORM</h3>
+          <p>Python dynamic internals (&quot;everything is an object&quot;), Object-Oriented Programming (OOP), Test-Driven Development (TDD), and SQLAlchemy ORM mapping.</p>
+          <span class="card-lang">Python · SQL · SQLAlchemy</span>
+        </article>
+
+        <article class="card" id="module-hbnb">
+          <div class="card-icon" aria-hidden="true">🏠</div>
+          <h3>AirBnB Clone (hbnb) Suite</h3>
+          <p>Multi-phase MVC application: interactive CLI console, JSON file serialization, MySQL relational database engine, Flask web routing, and RESTful API.</p>
+          <span class="card-lang">Python · Flask · MySQL</span>
+        </article>
+
+        <article class="card" id="module-devops-docker">
+          <div class="card-icon" aria-hidden="true">🐳</div>
+          <h3>DevOps, Docker &amp; Systems</h3>
+          <p>Linux server administration, idempotent Bash automation, Nginx reverse proxy load balancing, SSL/TLS certificates, and Docker containerization.</p>
+          <span class="card-lang">Bash · Docker · Nginx</span>
+        </article>
+
+        <article class="card" id="module-network">
+          <div class="card-icon" aria-hidden="true">🌐</div>
+          <h3>Network Protocols &amp; Sockets</h3>
+          <p>OSI 7 layers, TCP 3-way handshakes, UDP datagrams, Berkeley sockets API, DNS resolution chain, and HTTP/HTTPS request-response lifecycles.</p>
+          <span class="card-lang">Networking · POSIX Sockets</span>
+        </article>
+
+        <article class="card" id="module-web-react">
+          <div class="card-icon" aria-hidden="true">⚛️</div>
+          <h3>Web Front-End: Modern React</h3>
+          <p>Declarative UI architecture: Virtual DOM reconciliation, React Hooks (<code>useState</code>, <code>useEffect</code>, <code>useMemo</code>), and compile-time TypeScript type safety.</p>
+          <span class="card-lang">React · TypeScript</span>
+        </article>
+
+        <article class="card" id="module-web-backend">
+          <div class="card-icon" aria-hidden="true">🚀</div>
+          <h3>Web Back-End: Node.js &amp; MongoDB</h3>
+          <p>Non-blocking asynchronous I/O with the <code>libuv</code> event loop, Express REST API middleware chaining, cursor pagination, and NoSQL MongoDB storage.</p>
+          <span class="card-lang">Node.js · Express · MongoDB</span>
+        </article>
+
+        <article class="card" id="module-debugging">
+          <div class="card-icon" aria-hidden="true">🛠️</div>
+          <h3>Fix My Code Polyglot Debugging</h3>
+          <p>Systematic root cause analysis: off-by-one errors, memory corruption, and logical flaws across C, Python, JavaScript, and Ruby codebases.</p>
+          <span class="card-lang">GDB · Valgrind · RCA</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Section: Bioinformatics Bridge (#bridge) -->
+    <section id="bridge" style="background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.04), transparent); border-radius: 24px;" aria-labelledby="bridge-title">
+      <h2 id="bridge-title" class="section-title">🔬 CS Foundations → Bioinformatics Bridge</h2>
+      <p class="section-sub">How each computer science domain directly powers high-throughput bioinformatics, phylogenetics, and computational genomics</p>
+
+      <div class="bridge-grid">
+        <article class="bridge-item" id="bridge-c-sequence-parsers">
+          <div class="bridge-icon" aria-hidden="true">🧠</div>
+          <div>
+            <h3>C Memory Management → Sequence Parsers</h3>
+            <p>Direct pointer manipulation, memory-mapped files (<code>mmap</code>), and 2-bit nucleotide bitpacking are required to engineer ultra-fast genomic aligners like BLAST, BWA, and Bowtie.</p>
+          </div>
+        </article>
+
+        <article class="bridge-item" id="bridge-trees-phylogenetics">
+          <div class="bridge-icon" aria-hidden="true">🌳</div>
+          <div>
+            <h3>Tree &amp; Graph Algorithms → Phylogenetics &amp; Assembly</h3>
+            <p>Post-order traversals power Felsenstein’s likelihood pruning algorithm for evolutionary trees; Eulerian paths over de Bruijn graphs solve de novo genome assembly.</p>
+          </div>
+        </article>
+
+        <article class="bridge-item" id="bridge-docker-workflows">
+          <div class="bridge-icon" aria-hidden="true">🐳</div>
+          <div>
+            <h3>Docker &amp; DevOps → Reproducible Workflows</h3>
+            <p>Containerizing software stacks into OCI images guarantees 100% scientific reproducibility across Nextflow, Snakemake, and HPC SLURM cluster pipelines.</p>
+          </div>
+        </article>
+
+        <article class="bridge-item" id="bridge-python-omics">
+          <div class="bridge-icon" aria-hidden="true">🐍</div>
+          <div>
+            <h3>Python OOP → Biopython Omics Tooling</h3>
+            <p>Object-oriented abstractions allow structured handling of biological entities: <code>SeqRecord</code> features and macromolecular Structure-Model-Chain-Residue-Atom (SMCRA) hierarchies.</p>
+          </div>
+        </article>
+
+        <article class="bridge-item" id="bridge-rest-apis-genomics">
+          <div class="bridge-icon" aria-hidden="true">🔌</div>
+          <div>
+            <h3>REST APIs &amp; Sockets → Global Biological Databases</h3>
+            <p>Persistent TCP connection pooling and exponential backoff enable high-throughput programmatic data retrieval from NCBI, Ensembl, UniProt, and AlphaFold DB.</p>
+          </div>
+        </article>
+
+        <article class="bridge-item" id="bridge-hpc-clusters">
+          <div class="bridge-icon" aria-hidden="true">🖥️</div>
+          <div>
+            <h3>System Engineering → HPC Clusters</h3>
+            <p>Linux sysadmin, process management, and POSIX shell scripting are crucial for managing cluster job arrays and multi-terabyte sequencing pipelines.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: FAQ Section for SERP Rich Snippets (#faq) -->
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
+      <p class="section-sub">Clear answers regarding organization architecture, coursework access, and scientific alignment</p>
+
+      <div class="faq-container">
+
+        <details class="faq-item" open>
+          <summary class="faq-question">What is SuleimanHolbertonComputerScience?</summary>
+          <div class="faq-answer">
+            <strong>SuleimanHolbertonComputerScience</strong> is the official organizational knowledge hub archiving coursework, projects, and systems architectures completed during the 9-month intensive Computer Science and Software Engineering program at Holberton School by <strong>Suleiman Hajizadeh</strong>. It uniquely demonstrates how bare-metal systems programming directly underpins modern computational biology.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Why are the core source code and repositories private?</summary>
+          <div class="faq-answer">
+            The core repository (featuring 1,832+ git commits across 16 curriculum modules) and the internal 38+ page <strong>Obsidian LLM Wiki</strong> are maintained as <strong>Private</strong> to preserve academic integrity, prevent plagiarism of Holberton School curriculum solutions, and protect proprietary research architectures.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How can recruiters, evaluators, or researchers request access?</summary>
+          <div class="faq-answer">
+            Read access is granted upon request. Recruiters, academic reviewers, and collaborators can request access by sending an email to <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault">suleyman.hacizade1@gmail.com</a>. Please state your name, organization, and the purpose of your review.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How do Computer Science foundations apply to Bioinformatics?</summary>
+          <div class="faq-answer">
+            Bioinformatics tools must handle massive genomic datasets. Low-level C memory management powers sequence aligners (like BLAST, BWA, Bowtie); binary trees and graph traversals solve phylogenetic inference and genome assembly; and Docker/DevOps ensures reproducible pipelines in Nextflow and Snakemake on HPC supercomputers.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What is the Obsidian LLM Wiki inside this repository?</summary>
+          <div class="faq-answer">
+            The repository contains a persistent, compounding <strong>Obsidian LLM Wiki</strong> (38+ markdown notes) governed by <code>AGENTS.md</code>. It indexes all curriculum modules, fundamental CS concepts, Big-O complexity cheat sheets, and explicit bioinformatics bridge syntheses interconnected via bidirectional <code>[[wikilinks]]</code>.
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Section: About Author (#about) -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">👨‍💻 About the Author &amp; Access Contact</h2>
+      <p class="section-sub">Bioinformatics Researcher, Computational Biologist &amp; Software Engineer</p>
+
+      <div class="about-card">
+        <img src="logo.jpg" alt="Suleiman Hajizadeh — Bioinformatician &amp; Computational Biologist" class="about-avatar" width="96" height="96" loading="lazy" />
+        <div class="about-text">
+          <h3 id="author-name">Suleiman M. Hajizadeh</h3>
+          <div class="role">Bioinformatician &amp; Computational Biologist</div>
+          <p>
+            Equipped with a solid foundation from the intensive 9-month Holberton School Computer Science program, applying systems-level engineering principles to computational biology, macromolecular structural biophysics, genomics, and multi-omics data pipelines.
+            <br /><br />
+            🔒 <strong>Private Data Access Notice:</strong> All raw source code, assignment solutions, and internal wiki graphs are private. To request access for technical evaluation or research collaboration, please contact via email below.
+          </p>
+          <div class="about-links">
+            <a href="mailto:suleyman.hacizade1@gmail.com?subject=Access%20Request%3A%20SuleimanHolbertonComputerScience%20Private%20Data%20Vault" class="nav-access">
+              📧 Request Access: suleyman.hacizade1@gmail.com
+            </a>
+            <a href="https://github.com/SuleimanHajizadeh" target="_blank" rel="noopener noreferrer">
+              🔗 Personal GitHub Profile
+            </a>
+            <a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank" rel="noopener noreferrer">
+              🏛️ Organization Hub
+            </a>
+            <a href="https://suleimanbioinformatics.github.io/" target="_blank" rel="noopener noreferrer">
+              🧬 SuleimanBioinformatics
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
+  </main>
+
+  <!-- Semantic Footer with Crawlable Links & Breadcrumbs -->
+  <footer aria-label="Site Footer">
+    <ul class="footer-nav">
+      <li><a href="#hero-title">Top</a></li>
+      <li><a href="#access">Private Access</a></li>
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#bridge">Bioinformatics</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#about">Author</a></li>
+      <li><a href="https://github.com/SuleimanHolbertonComputerScience" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
+      <li><a href="sitemap.xml">XML Sitemap</a></li>
+      <li><a href="robots.txt">Robots.txt</a></li>
+    </ul>
     <p>
       Crafted with 💙 | 
       <a href="https://github.com/SuleimanHolbertonComputerScience">SuleimanHolbertonComputerScience</a> · 
       Holberton School Computer Science Archive · 
       <a href="https://github.com/SuleimanHajizadeh">Suleiman Hajizadeh</a>
       <br />
-      <span style="display:inline-block; margin-top:0.5rem;">
-        🔒 Core data & repositories are <strong>Private</strong> — For access requests, contact: <a href="mailto:suleyman.hacizade1@gmail.com">suleyman.hacizade1@gmail.com</a>
+      <span style="display:inline-block; margin-top:0.6rem;">
+        🔒 Core data &amp; repositories are <strong>Private</strong> — For access requests, email: 
+        <a href="mailto:suleyman.hacizade1@gmail.com">suleyman.hacizade1@gmail.com</a>
       </span>
     </p>
   </footer>

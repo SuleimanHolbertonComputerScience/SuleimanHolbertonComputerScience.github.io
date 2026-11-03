@@ -1,0 +1,30 @@
+{
+  "name": "SuleimanHolbertonComputerScience",
+  "short_name": "SuleimanHCS",
+  "description": "Holberton School 9-Month Computer Science & Software Engineering Foundations. Bridging systems programming with computational biology.",
+  "start_url": "https://suleimanholbertoncomputerscience.github.io/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "SuleimanHolbertonComputerScience_logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "categories": [
+    "education",
+    "science",
+    "technology",
+    "developer-tools"
+  ],
+  "lang": "en"
+}

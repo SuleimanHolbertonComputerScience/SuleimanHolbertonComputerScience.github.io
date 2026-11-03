@@ -3,28 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 — SuleimanHolbertonComputerScience</title>
+  <title>404 — Page Not Found | SuleimanHolbertonComputerScience</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="The requested page could not be found. Return to SuleimanHolbertonComputerScience portfolio." />
+  <link rel="canonical" href="https://suleimanholbertoncomputerscience.github.io/" />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
   <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --cyan: #00d4ff;
+      --purple: #7c3aed;
+      --text: #e6edf3;
+      --muted: #8b949e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0d1117; color: #e6edf3;
-      display: flex; align-items: center; justify-content: center;
-      min-height: 100vh; text-align: center; padding: 2rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
     }
-    h1 { font-size: 5rem; margin-bottom: 0.5rem; }
-    p { color: #8b949e; margin-bottom: 2rem; }
-    a {
-      padding: 0.6rem 1.4rem;
-      background: linear-gradient(135deg, #00d4ff, #7c3aed);
-      color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600;
+    .container {
+      max-width: 520px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
+    .logo {
+      width: 80px; height: 80px;
+      border-radius: 20px;
+      border: 2px solid var(--cyan);
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.8rem; }
+    p { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.5; }
+    .btn-group { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: transform .15s, opacity .15s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      color: #fff;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-secondary:hover { border-color: var(--cyan); }
   </style>
 </head>
 <body>
-  <div>
+  <div class="container">
+    <img src="logo.jpg" alt="SuleimanHolbertonComputerScience Logo" class="logo" />
     <h1>404</h1>
-    <p>Segment fault... just kidding. Page not found.</p>
-    <a href="/">← Back to Home</a>
+    <h2>Segmentation Fault... Page Not Found</h2>
+    <p>The path or file you are looking for does not exist or has been relocated within the architecture.</p>
+    <div class="btn-group">
+      <a href="/" class="btn btn-primary">← Return Home</a>
+      <a href="/#modules" class="btn btn-secondary">Explore Modules</a>
+      <a href="/#access" class="btn btn-secondary">Request Access</a>
+    </div>
   </div>
 </body>
 </html>

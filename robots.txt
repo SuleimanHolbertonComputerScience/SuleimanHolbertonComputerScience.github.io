@@ -1,0 +1,42 @@
+# ==============================================================================
+# Robots.txt for SuleimanHolbertonComputerScience
+# Canonical URL: https://suleimanholbertoncomputerscience.github.io/
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /logo.jpg
+Allow: /SuleimanHolbertonComputerScience_logo.jpg
+Allow: /manifest.json
+Allow: /sitemap.xml
+
+# Explicit Bot Directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /logo.jpg
+Allow: /SuleimanHolbertonComputerScience_logo.jpg
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Disallow Error Pages
+Disallow: /404.html
+Disallow: /404
+
+# Sitemap Location
+Sitemap: https://suleimanholbertoncomputerscience.github.io/sitemap.xml
